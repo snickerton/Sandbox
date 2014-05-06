@@ -19,13 +19,13 @@ function test() {
     }
 }
 
-function recurse(int xPos, int yPos) {
+function recurse(xPos, yPos) {
     while(notDeadEnd(xPos, yPos)) {
         document.getElementById("output").innerHTML = "not complete";
     }
 }
 
-function notDeadEnd(int x, int y) {
+function notDeadEnd(x, y) {
     return grid[x+1][y] || grid[x-1][y] || grid[x][y+1] || grid[x][y-1];
 }
 
