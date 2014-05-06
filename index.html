@@ -3,7 +3,7 @@
 
 <h1>Testing Javascript</h1>
 
-<button type="button" onclick="recurse(0,0)">Do something</button>
+<button type="button" onclick="test()">Do something</button>
 
 <p id="output"></p>
 
@@ -11,9 +11,16 @@
 
 var grid = [[true, true, true],[true, true, true],[true, true, true]];
 
+function test() {
+    var i = 0;
+    while(i<10){
+        document.getElementById("output").innerHTML = i++;
+    }
+}
+
 function recurse(int xPos, int yPos) {
     while(notDeadEnd(xPos, yPos)) {
-        document.getElementById("output").innerHTML = ;
+        document.getElementById("output").innerHTML = "not complete";
     }
 }
 
