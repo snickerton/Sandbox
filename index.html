@@ -3,14 +3,24 @@
 
 <h1>Testing Javascript</h1>
 
-<button type="button" onclick="myFunction()">Do something</button>
+<button type="button" onclick="recurse(0,0)">Do something</button>
 
-<p id="demo"></p>
+<p id="output"></p>
 
 <script>
-function myFunction() {
-    document.getElementById("demo").innerHTML = "asdf asdf <br/> asdf";
+
+var grid = [[true, true, true],[true, true, true],[true, true, true]];
+
+function recurse(int xPos, int yPos) {
+    while(notDeadEnd(xPos, yPos)) {
+        document.getElementById("output").innerHTML = ;
+    }
 }
+
+function notDeadEnd(int x, int y) {
+    return grid[x+1][y] || grid[x-1][y] || grid[x][y+1] || grid[x][y-1];
+}
+
 </script>
 
 </body>
