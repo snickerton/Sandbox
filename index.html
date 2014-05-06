@@ -21,7 +21,13 @@ function test() {
 
 function recurse(xPos, yPos) {
     while(notDeadEnd(xPos, yPos)) {
-        document.getElementById("output").innerHTML = "not complete";
+        //Visit node
+        grid[xPos][yPos] = false;
+        //print array
+        document.getElementById("output").innerHTML = "not complete"; 
+        //not complete
+        var newNeighbor = randNeighbor(xPos, yPos);
+        recurse(newNeighbor);
     }
 }
 
